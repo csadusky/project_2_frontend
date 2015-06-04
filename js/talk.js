@@ -24,6 +24,8 @@ $(document).ready(function(){
     .done(function(line_data){
       console.log(line_data);
       var html = "<dl id='current_line' data-current-line='" + line_data.id + "'><dt>Color</dt><dd>" + line_data.color + "</dd><dt>Direction</dt><dd>" + line_data.direction + "</dd></dl>";
+
+
       $('#line').html("");
       $('#line').append(html);
 
@@ -39,25 +41,26 @@ $(document).ready(function(){
   });
 
   $('#submit-button').on("click",function(event){
-    var commentData ={
-      post: $("new-post").val()
-    }
+    var commentData ={comment: {
+      post: $("#new-post").val()
+    }}
 
-    var currentLineId = $('#current_line').data('current_line');
+    var currentLineId = $('#current_line').data('current-line');
     console.log('created post for user with line id of' + currentLineId);
-
       $.ajax({
         type: 'POST',
-        url:"http://localhost:3000/lines/:id/comments" + currentLineId,
-        data:{commentData: commentData}
+        url:"http://localhost:3000/lines/" + currentLineId + "/comments",
+        dataType: "json",
+        data: commentData
       })
       .done(function(){
         alert("success");
       })
       .fail(function(){
         alert("failure");
-      });
-    })
+      })
+      $('#line').append(commentHTML);
+    });
 });
 
 
@@ -119,3 +122,5 @@ $(document).ready(function(){
 //       console.log(textStatus);
 
 // });
+
+
