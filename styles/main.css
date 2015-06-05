@@ -1,5 +1,6 @@
 div#Tlogo{
   display: inline-block;
+  margin-top: 100px;
 
 }
 
@@ -10,4 +11,12 @@ h1{
 
 div#lines{
   display: block;
+}
+
+#new-user {
+  display: none;
+}
+
+#login {
+  display: none;
 }

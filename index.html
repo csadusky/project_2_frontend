@@ -3,12 +3,52 @@
 <head>
   <title>Talk</title>
   <link rel="stylesheet" type="text/css" href="styles/main.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/talk.js" type="text/javascript" charset="utf-8" async defer></script>
 
 </head>
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">COMPACT</a>
+  </div>
+  <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#">About Compact<span class="sr-only">(current)</span></a></li>
+      <li><a href="#">Add Cosmetic</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Cosmetic Bag <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Eyes</a></li>
+          <li><a href="#">Lips</a></li>
+          <li><a href="#">Face</a></li>
+          <li><a href="#">Hair</a></li>
+          <li><a href='#'>Body</a></li>
+          <!-- <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+          <li class="divider"></li>
+          <li><a href="#">One more separated link</a></li> -->
+        </ul>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Log In <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a id='create-user' href="#">Create New User</a></li>
+          <li><a id='login-user' href="#">Login</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  </nav>
+
 <!-- <ul id="lines">
 </ul> -->
 <div id="Tlogo">
@@ -30,16 +70,26 @@ Emoji: <textarea id = "new-emoji" name="body"></textarea><br/>
 
 <div id="new-user">
 Username: <input id = "new-username" type = "text" name ="body" value="" placeholder="new user"><br/>
-Password: <input id = "password" type = "text" name ="body" value="" placeholder="password"><br/>
+Email: <input id = "new-user-email" type = "text" name ="body" value="" placeholder="new user"><br/>
+Password: <input id = "new-user-password" type = "text" name ="body" value="" placeholder="password"><br/>
+Password Confirmation: <input id = "new-user-password-confirmation" type = "text" name ="body" value="" placeholder="password"><br/>
 <button id="user-button">Make User</button>
 </div>
 <div id="users">
 </div>
 
+<div id="login">
+Username: <input id = "user-login" type = "text" name ="body" value="" placeholder="new user"><br/>
+Password: <input id = "user-password" type = "text" name ="body" value="" placeholder="password"><br/>
+<br/>
+<button id="login-button">Log In</button>
+</div>
+
+
 
 <!-- Authentication -->
 
-<!-- <input id="username" type="text" value="" placeholder="username">
+  <!-- <input id="username" type="text" value="" placeholder="username">
   <input id="password" type="password" value="" placeholder="password">
   <input id="get-token" type="button" value="Get Token">
   <br>
@@ -53,7 +103,7 @@ Password: <input id = "password" type = "text" name ="body" value="" placeholder
   <br>
   <label for="result">Result:</label>
   <input id="result" placeholder="empty">
- -->
+  -->
 </body>
 </html>
 

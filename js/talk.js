@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+  $('#create-user').on('click', function(){
+    // show the form for creating the new user
+    $('#new-user').show();
+  });
+
+  $('#login-user').on('click', function(){
+    // show the form for creating the new user
+    $('#login').show();
+  });
+
   // Pre-load list of lines
   $.ajax({
     type: 'GET',
@@ -77,94 +87,71 @@ $(document).ready(function(){
   $('#user-button').on("click",function(){
 
     //1. Create a new User
+    var newUser = {
+       username: $('#new-username').val(),
+  //        email: $('#new-user-email').val(),
+       password: $('#new-user-password').val(),
+       password_confirmation: $('#new-user-password-confirmation').val(),
+    };
 
-
-    //2. POST the new User to our API.
-    //3. (Optional) Render data about the User
-
-    //
-      // var userData ={user: {
-      //   post: $("#new-username").val()
-      // }}
-
-      // var newUserId = $('#new-user').data;
-      // console.log('created new user');
-
-      // $.ajax({
-      //   type: 'POST',
-      //   url:"http://localhost:3000/",
-      //   dataType: "json",
-      //   data:
-      // })
-      // .done(function(){
-      //   alert("success");
-      // })
-      // .fail(function(){
-      //   alert("failure");
-      // })
-    //
+    $.ajax({
+      type: 'POST',
+      url:"http://localhost:3000/register/",
+      data: {credentials: newUser}
+    })
+    .done(function(response, textStatus){
+      alert("success");
+    })
+    .fail(function(jqxhr, textStatus, errorThrown){
+      alert("failure");
+    })
   });
+
+  $('#login-button').on("click", function(){
+    var loginUsername = $('#user-login').val();
+    var loginPassword = $('#user-password').val();
+    var params = {
+      credentials: {
+        loginUsername: loginUsername,
+        loginPassword: loginPassword
+      }
+    };
+    $.ajax ({
+      type: 'POST',
+      url: "http://localhost:3000/login/",
+      dataType: 'json',
+      data: params
+    })
+    .done(function(data){
+      $('#login').hide();
+    })
+    .fail(function(error){
+      console.log("error in login" + error);
+    });
+  });
+  // $('#login').on("click",function(){
+
+  //   var userLogin = {
+  //      username: $('#user-login').val(),
+  //      password: $('#user-password').val(),
+  //   };
+
+  //   $.ajax({
+  //     type: 'POST',
+  //     url:"http://localhost:3000/login/",
+  //     data: {credentials: userLogin}
+  //   })
+  //   .done(function(response, textStatus){
+  //     alert("success");
+  //   })
+  //   .fail(function(jqxhr, textStatus, errorThrown){
+  //     alert("failure");
+  //   });
 
 });
 
 
 
 
-
-
-
-
-
-
-
-
-//Authentication
-
-
-// $(function(){
-//   $('#get-token').on('click', function(){
-//     $.ajax('http://localhost:3000/login',{
-//       contentType: 'application/json',
-//       processData: false,
-//       data: JSON.stringify({
-//         credentials: {
-//           username: $('#username').val(),
-//           password: $('#password').val()
-//         }
-//       }),
-//       dataType: "json",
-//       method: "POST"
-//     }).done(function(data, textStatus) {
-//       $('#token').val(textStatus == 'nocontent' ? 'login failed' : data['token']);
-//       console.log(data);
-//     }).fail(function(jqxhr, textStatus, errorThrown){
-//       console.log(textStatus);
-//     });
-//   });
-//   $('#get-index').on('click', function(){
-//     $.ajax('http://localhost:3000/hello',{
-//       dataType: "json",
-//       method: "GET",
-//       headers: { Authorization: 'Token token=' + $("#token").val() }
-//     }).done(function(data, textStatus) {
-//       $('#result').val(JSON.stringify(data));
-//       console.log(data);
-//     }).fail(function(jqxhr, textStatus, errorThrown){
-//       console.log(textStatus);
-//     });
-//   });
-//   $('#get-by-id').on('click', function(){
-//     $.ajax('http://localhost:3000/hello/' +
-//       $('#id').val(), {
-//       dataType: "json",
-//       method: "GET",
-//       headers: { Authorization: 'Token token=' + $("#token").val() }
-//     }).done(function(data, textStatus) {
-//       $('#result').val(JSON.stringify(data));
-//       console.log(data);
-//     }).fail(function(jqxhr, textStatus, errorThrown){
-//       console.log(textStatus);
-
-// });
 
 
