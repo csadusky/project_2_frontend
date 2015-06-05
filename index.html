@@ -6,6 +6,7 @@
   <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src = "js/simpleStorage.js"></script>
   <script src="/js/talk.js" type="text/javascript" charset="utf-8" async defer></script>
 
 </head>
@@ -20,29 +21,15 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">COMPACT</a>
+    <a class="navbar" href="#">Have something you want to say about the T?</a>
   </div>
   <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="#">About Compact<span class="sr-only">(current)</span></a></li>
-      <li><a href="#">Add Cosmetic</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Cosmetic Bag <span class="caret"></span></a>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">Eyes</a></li>
-          <li><a href="#">Lips</a></li>
-          <li><a href="#">Face</a></li>
-          <li><a href="#">Hair</a></li>
-          <li><a href='#'>Body</a></li>
-          <!-- <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-          <li class="divider"></li>
-          <li><a href="#">One more separated link</a></li> -->
-        </ul>
         <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Log In <span class="caret"></span></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User <span class="caret"></span></a>
         <ul class="dropdown-menu" role="menu">
           <li><a id='create-user' href="#">Create New User</a></li>
           <li><a id='login-user' href="#">Login</a></li>
+          <li><a id= 'logout-user' href="#">Logout</a></li>
         </ul>
       </li>
     </ul>
@@ -84,7 +71,8 @@ Password: <input id = "user-password" type = "text" name ="body" value="" placeh
 <br/>
 <button id="login-button">Log In</button>
 </div>
-
+<div id= "userDiv">
+</div>
 
 
 <!-- Authentication -->

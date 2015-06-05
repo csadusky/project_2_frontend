@@ -1,4 +1,24 @@
+//path for heroku
+var baseURL = function(){
+ return "http://localhost:3000";
+ // return "http://heroku";
+};
+
+//Function that checks to see if token is present, to show things, hide things
+var toggle = function(){
+  if (simpleStorage.get('token')){
+    $('#new-comment').show();
+    $('#userDiv').show();
+  }else{
+    $('#new-comment').hide();
+    $('#userDiv').hide();
+  }
+
+};
+
 $(document).ready(function(){
+
+  toggle();
 
   $('#create-user').on('click', function(){
     // show the form for creating the new user
@@ -62,8 +82,7 @@ $(document).ready(function(){
     // Create a comment to add to the current line.
     var commentData ={comment: {
       post: $("#new-post").val(),
-      line_id: currentLineId,
-      user_id: 1
+      line_id: currentLineId
     }};
 
     // POST the comment to the API.
@@ -72,7 +91,8 @@ $(document).ready(function(){
       type: 'POST',
       url:"http://localhost:3000/lines/" + currentLineId + "/comments",
       dataType: "json",
-      data: commentData
+      data: commentData,
+      headers: { Authorization: 'Token token=' + simpleStorage.get('token') }
     })
     .done(function(){
       // alert("success");
@@ -83,13 +103,11 @@ $(document).ready(function(){
     })
   });
 
-  // For creating users
+  //NEW USER BUTTON
   $('#user-button').on("click",function(){
 
-    //1. Create a new User
     var newUser = {
        username: $('#new-username').val(),
-  //        email: $('#new-user-email').val(),
        password: $('#new-user-password').val(),
        password_confirmation: $('#new-user-password-confirmation').val(),
     };
@@ -100,13 +118,16 @@ $(document).ready(function(){
       data: {credentials: newUser}
     })
     .done(function(response, textStatus){
-      alert("success");
+      $("#new-user").hide();
+      console.log("Your account has been created!");
     })
-    .fail(function(jqxhr, textStatus, errorThrown){
-      alert("failure");
-    })
+    .fail(function(textStatus, errorThrown){
+      console.log("Error in creating new user " + error);
+    });
   });
 
+
+  //LOGIN BUTTON
   $('#login-button').on("click", function(){
     var loginUsername = $('#user-login').val();
     var loginPassword = $('#user-password').val();
@@ -124,31 +145,45 @@ $(document).ready(function(){
     })
     .done(function(data){
       $('#login').hide();
+      console.log(data);
+      renderUserData(data);
+      simpleStorage.set('token', data.token, {TTL: 43200000})
+      toggle();
+      console.log ("sucessful login");
     })
     .fail(function(error){
       console.log("error in login" + error);
     });
   });
-  // $('#login').on("click",function(){
 
-  //   var userLogin = {
-  //      username: $('#user-login').val(),
-  //      password: $('#user-password').val(),
-  //   };
 
-  //   $.ajax({
-  //     type: 'POST',
-  //     url:"http://localhost:3000/login/",
-  //     data: {credentials: userLogin}
-  //   })
-  //   .done(function(response, textStatus){
-  //     alert("success");
-  //   })
-  //   .fail(function(jqxhr, textStatus, errorThrown){
-  //     alert("failure");
-  //   });
+  //LOGOUT BUTTON
+  $("#logout-user").on("click", function(){
+     $.ajax({
+       method: 'DELETE',
+       url: baseURL() + "/logout",
+       headers: { Authorization: 'Token token=' + simpleStorage.get('token') }
+     })
+     .done(function(){
+       console.log("logged out");
+     })
+     .fail(function(){
+       alert("Error in logging out");
+     }).always(function(){
+       simpleStorage.set('token', '');
+       toggle();
+     });
+   });
+
+
+  //USER GREETING
+var renderUserData = function(data){
+  $('#userDiv').html("hello," + data.username);
+
+};
 
 });
+
 
 
 
