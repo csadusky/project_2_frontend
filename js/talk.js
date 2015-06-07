@@ -1,4 +1,4 @@
-//path for heroku
+//PATH FOR HEROKU
 var baseURL = function(){
  return "http://localhost:3000";
  // return "http://heroku";
@@ -30,20 +30,19 @@ $(document).ready(function(){
     $('#login').show();
   });
 
-  // Pre-load list of lines
+
+  // SHOW LIST OF LINES
   $.ajax({
     type: 'GET',
     url: "http://localhost:3000/lines"
   }).done(function(line_data){
-    // console.log(line_data);
     line_data.forEach(function(line){
-      // $("#lines").append("<li id='" + line.id + "'>" + line.color + "</li>");
-      $("#lines").append("<button id='" + line.id + "'>" + line.color + "</button>");
+      $("#lines").append("<button id='" + line.id + "'>" + line.name + "</button>");
     })
   }).fail(function(line_data){
     console.log("failed when going to get line data");
     alert("failed");
-  })
+  });
 
   var renderLine = function(lineID){
     $.ajax({
@@ -66,8 +65,7 @@ $(document).ready(function(){
     .fail(function(line_data){
       console.log("failed");
     });
-  }
-
+  };
   // List color, direction, and comments for the clicked line.
   $('#lines').on("click",function(event){
     // alert("clicked element with id " + event.target.id);
@@ -100,7 +98,7 @@ $(document).ready(function(){
     })
     .fail(function(){
       alert("failure");
-    })
+    });
   });
 
   //NEW USER BUTTON
@@ -120,6 +118,7 @@ $(document).ready(function(){
     .done(function(response, textStatus){
       $("#new-user").hide();
       console.log("Your account has been created!");
+      //renderNewUser();
     })
     .fail(function(textStatus, errorThrown){
       console.log("Error in creating new user " + error);
@@ -178,10 +177,9 @@ $(document).ready(function(){
 
   //USER GREETING
 var renderUserData = function(data){
-  $('#userDiv').html("hello," + data.username);
+  $('#userDiv').html("hello, " + data.username);
 
-};
-
+  };
 });
 
 

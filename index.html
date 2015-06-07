@@ -15,15 +15,15 @@
 <div class="container-fluid">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+  <!--   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
-    </button>
+    </button> -->
     <a class="navbar" href="#">Have something you want to say about the T?</a>
   </div>
-  <ul class="nav navbar-nav navbar-right">
+  <ul class="nav navbar-nav navbar-left">
         <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User <span class="caret"></span></a>
         <ul class="dropdown-menu" role="menu">
@@ -51,15 +51,15 @@
 
 <div id="new-comment">
 Post: <textarea id = "new-post" type="text" name="body" value="" placeholder="post here"></textarea><br/>
-Emoji: <textarea id = "new-emoji" name="body"></textarea><br/>
+<!-- Emoji: <textarea id = "new-emoji" name="body"></textarea><br/> -->
 <button id="submit-button">Submit Comment</button>
 </div>
 
 <div id="new-user">
 Username: <input id = "new-username" type = "text" name ="body" value="" placeholder="new user"><br/>
 Email: <input id = "new-user-email" type = "text" name ="body" value="" placeholder="new user"><br/>
-Password: <input id = "new-user-password" type = "text" name ="body" value="" placeholder="password"><br/>
-Password Confirmation: <input id = "new-user-password-confirmation" type = "text" name ="body" value="" placeholder="password"><br/>
+Password: <input id = "new-user-password" type = "password" name ="body" value="" placeholder="password"><br/>
+Password Confirmation: <input id = "new-user-password-confirmation" type = "password" name ="body" value="" placeholder="password"><br/>
 <button id="user-button">Make User</button>
 </div>
 <div id="users">
@@ -67,31 +67,17 @@ Password Confirmation: <input id = "new-user-password-confirmation" type = "text
 
 <div id="login">
 Username: <input id = "user-login" type = "text" name ="body" value="" placeholder="new user"><br/>
-Password: <input id = "user-password" type = "text" name ="body" value="" placeholder="password"><br/>
+Password: <input id = "user-password" type = "password" name ="body" value="" placeholder="password"><br/>
 <br/>
 <button id="login-button">Log In</button>
 </div>
 <div id= "userDiv">
 </div>
+<div id= "newUserDiv">
+</div>
 
 
-<!-- Authentication -->
 
-  <!-- <input id="username" type="text" value="" placeholder="username">
-  <input id="password" type="password" value="" placeholder="password">
-  <input id="get-token" type="button" value="Get Token">
-  <br>
-  <label for="token">Token:</label>
-  <input id="token" placeholder="empty">
-  <br>
-  <label for="id">Id:</label>
-  <input id="id" type="text" placeholder="">
-  <input id="get-by-id" type="button" value="Get By Id">
-  <input id="get-index" type="button" value="Get Index">
-  <br>
-  <label for="result">Result:</label>
-  <input id="result" placeholder="empty">
-  -->
 </body>
 </html>
 
