@@ -19,3 +19,8 @@ User stories
 
 
 In the process of making my app, I realized some of things that I wanted to do were just not practical for me to get done in time.  After finishing all the basic functionality of the app, I would have like to have been able to make my app so that the lines could be divided between inbound and outbound, you didnt have to see all the lines listed at the top.  I also wanted to have a button the said view, or comment.  I actually like that I did not do this.  I was able to make my app so that you could not comment unless you were logged in/created an account, I think it flowed much better this way.  The main thing I wanted to do to the app was to be able to see the most recent comments at the top, so a user wouldnt have to scroll down.  I under estimated how difficult this functionality would be for my app, and was not able to figure out how to do it in time.
+
+
+Link to wireframe
+
+https://www.evernote.com/l/AkkwmPDVsn5OU5en5xeu46WKzr4XlsiIndY

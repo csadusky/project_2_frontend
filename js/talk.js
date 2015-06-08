@@ -177,7 +177,7 @@ $(document).ready(function(){
 
   //USER GREETING
 var renderUserData = function(data){
-  $('#userDiv').html("hello, " + data.username);
+  $('#userDiv').html("Hello, " + data.username + "! Click on a line and start talking to others on the T.");
 
   };
 });
