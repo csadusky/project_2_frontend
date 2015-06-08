@@ -1,6 +1,7 @@
 div#Tlogo{
   display: inline-block;
   margin-top: 100px;
+  margin-left: 50px;
 
 }
 
@@ -11,6 +12,17 @@ h1{
 
 div#lines{
   display: block;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 11px;
+}
+
+div#line{
+  font-size: 15px;
+}
+
+div#aa{
+  margin: 100px;
 }
 
 #new-user {

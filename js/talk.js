@@ -84,7 +84,7 @@ $(document).ready(function(){
     }};
 
     // POST the comment to the API.
-    //console.log('created post for user with line id of' + currentLineId);
+
     $.ajax({
       type: 'POST',
       url:"http://localhost:3000/lines/" + currentLineId + "/comments",
@@ -93,7 +93,6 @@ $(document).ready(function(){
       headers: { Authorization: 'Token token=' + simpleStorage.get('token') }
     })
     .done(function(){
-      // alert("success");
       renderLine(currentLineId);
       $('#new-post').val("");
     })
