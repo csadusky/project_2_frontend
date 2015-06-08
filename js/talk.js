@@ -72,11 +72,11 @@ $(document).ready(function(){
     renderLine(event.target.id);
   });
 
-  // For submitting comments
+  // SUBMITTING A COMMENT
+
   $('#submit-button').on("click",function(){
     // Get the ID of the current line from our HTML (which has already loaded it).
     var currentLineId = $('#current_line').data('current-line');
-
     // Create a comment to add to the current line.
     var commentData ={comment: {
       post: $("#new-post").val(),
@@ -95,6 +95,7 @@ $(document).ready(function(){
     .done(function(){
       // alert("success");
       renderLine(currentLineId);
+      $('#new-post').val("");
     })
     .fail(function(){
       alert("failure");
