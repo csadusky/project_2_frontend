@@ -1,7 +1,7 @@
 //PATH FOR HEROKU
 var baseURL = function(){
  return "http://localhost:3000";
- // return "http://heroku";
+ // return "https://immense-plateau-4769.herokuapp.com";
 };
 
 //Function that checks to see if token is present, to show things, hide things
@@ -66,10 +66,10 @@ $(document).ready(function(){
       console.log("failed");
     });
   };
-  // List color, direction, and comments for the clicked line.
+  // LIST COLOR, DIRECTION, AND COMMENTS
   $('#lines').on("click",function(event){
-    // alert("clicked element with id " + event.target.id);
     renderLine(event.target.id);
+    $('#userDiv').html(" ");
   });
 
   // SUBMITTING A COMMENT
