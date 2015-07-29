@@ -1,3 +1,4 @@
+/*LOGO*/
 div#Tlogo{
   display: inline-block;
   margin-top: 120px;
@@ -9,20 +10,13 @@ h1{
   display: inline-block;
 }
 
-div#lines{
-  display: block;
-  margin-left: 100px;
-  margin-right: 50px;
-  margin-bottom: 10px;
-  font-size: 11px;
-}
-
-div#line{
-  font-size: 15px;
-}
-
+/*DIV THAT CONTAINS ALL FORMS AND COMMENTS*/
 div#all-actions{
   margin-left: 105px;
+  background: url(https://c.o0bg.com/rf/image_960w/Boston/2011-2020/2014/08/03/BostonGlobe.com/Metro/Images/T%20green%20lineasdf1-asdf126asdf9227.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
 }
 
 /*NEW USER FORM*/
@@ -39,7 +33,7 @@ div#all-actions{
   border-radius: 5px;
 }
 
-/*LOGIN FORM*/
+/*LOGIN FORM AND GREETING*/
 .login-form input{
   border-color: #9E9E9E;
   color: #9E9E9E;
@@ -52,15 +46,43 @@ div#all-actions{
   background-color: white;
   border-radius: 5px;
 }
+#userDiv{
+  color: #9E9E9E;
+  background-color: white;
+  font-size: 20px;
+}
 #new-user {
   display: none;
 }
-
 #login {
   display: none;
 }
+/*NEW COMMENT FORM*/
+#new-post{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+#submit-button{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  background-color: white;
+  border-radius: 5px;
+}
+div#line{
+  font-size: 15px;
+}
 
 /*BUTTONS*/
+div#lines{
+  display: block;
+  margin-left: 100px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+
 [id='1']{
   background-color: #fa2d27;
   color: white;

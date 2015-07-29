@@ -34,7 +34,7 @@ $(document).ready(function(){
   // SHOW LIST OF LINES
   $.ajax({
     type: 'GET',
-    url: "http://localhost:3000/lines"
+    url: baseURL() + "/lines"
   }).done(function(line_data){
     line_data.forEach(function(line){
       $("#lines").append("<button id='" + line.id + "'>" + line.name + "</button>");
@@ -48,7 +48,7 @@ $(document).ready(function(){
   var renderLine = function(lineID){
     $.ajax({
       type: 'GET',
-      url: "http://localhost:3000/lines/" + lineID
+      url: baseURL() + "/lines/" + lineID
     })
     .done(function(line_data){
       // console.log(line_data);
@@ -88,7 +88,7 @@ $(document).ready(function(){
 
     $.ajax({
       type: 'POST',
-      url:"http://localhost:3000/lines/" + currentLineId + "/comments",
+      url: baseURL + "/lines/" + currentLineId + "/comments",
       dataType: "json",
       data: commentData,
       headers: { Authorization: 'Token token=' + simpleStorage.get('token') }
@@ -113,7 +113,7 @@ $(document).ready(function(){
 
     $.ajax({
       type: 'POST',
-      url:"http://localhost:3000/register/",
+      url: baseURL() + "/register/",
       data: {credentials: newUser}
     })
     .done(function(response, textStatus){
@@ -140,7 +140,7 @@ $(document).ready(function(){
     };
     $.ajax ({
       type: 'POST',
-      url: "http://localhost:3000/login/",
+      url: baseURL() + "/login/",
       dataType: 'json',
       data: params
     })
