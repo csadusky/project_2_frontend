@@ -1,0 +1,185 @@
+/*LOGO*/
+div#Tlogo{
+  display: inline-block;
+  margin-top: 120px;
+  margin-left: 100px;
+  margin-bottom: 30px;
+}
+
+h1{
+  display: inline-block;
+}
+
+/*DIV THAT CONTAINS ALL FORMS AND COMMENTS*/
+div#all-actions{
+  margin-left: 105px;
+/*  background: url(https://c.o0bg.com/rf/image_960w/Boston/2011-2020/2014/08/03/BostonGlobe.com/Metro/Images/T%20green%20lineasdf1-asdf126asdf9227.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;*/
+}
+
+/*NEW USER FORM*/
+.new-user-form input{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+#user-button{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/*LOGIN FORM AND GREETING*/
+.login-form input{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+#login-button{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  background-color: white;
+  border-radius: 5px;
+}
+#userDiv{
+  color: #9E9E9E;
+  background-color: white;
+  font-size: 20px;
+}
+#new-user {
+  display: none;
+}
+#login {
+  display: none;
+}
+/*NEW COMMENT FORM*/
+#new-post{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+#submit-button{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  background-color: white;
+  border-radius: 5px;
+}
+div#line{
+  font-size: 15px;
+}
+
+/*BUTTONS*/
+div#lines{
+  display: block;
+  margin-left: 100px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+
+[id='1']{
+  background-color: #fa2d27;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='2']{
+  background-color: #fa2d27;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='3']{
+  background-color: #008150;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='4']{
+  background-color: #008150;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='5']{
+  background-color: #2f5da6;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='6']{
+  background-color: #2f5da6;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='7']{
+  background-color: #fd8a03;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='8']{
+  background-color: #fd8a03;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='9']{
+  background-color: #9a9c9d;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='10']{
+  background-color: #9a9c9d;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}

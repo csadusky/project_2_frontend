@@ -1,16 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-</head>
-<body>
-<hr/>
-    <div id="see-lines">
-    <div id="line-contents"></div>
-    <button id="see-lines-button">refresh</button>
+  <head>
+    <title>Talk</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src = "js/simpleStorage.js"></script>
+    <script src="/js/talk.js" type="text/javascript" charset="utf-8" async defer></script>
+
+  </head>
+
+  <body>
+  <!-- NAVBAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar" href="#">Have something you want to say about the T?</a>
+      </div>
+      <ul class="nav navbar-nav navbar-left">
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Log in <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a id='create-user' href="#">Create New User</a></li>
+              <li><a id='login-user' href="#">Login</a></li>
+              <li><a id= 'logout-user' href="#">Logout</a></li>
+            </ul>
+          </li>
+      </ul>
     </div>
-    <script type="text/javascript">
-</body>
+    </nav>
+  <!-- LOGO -->
+    <div id="Tlogo">
+      <img src = "https://www.governmentjobs.com/AgencyPages/mbta/agencyImages/download/500px-MBTA_svg.png" style="width:100px;height:100px;">
+    </div>
+
+    <h1>alk</h1>
+    <br/>
+
+    <!-- LINE BUTTONS DIV -->
+      <div id="lines">
+      </div>
+
+  <!-- ALL ACTIONS -->
+    <div id ="all-actions">
+     <!--  NEW USER FORM -->
+      <div class= "new-user-form" id="new-user">
+        <input id = "new-username" type = "text" name ="body" value="" placeholder="username"><br/>
+        <input id = "new-user-email" type = "text" name ="body" value="" placeholder="email"><br/>
+        <input id = "new-user-password" type = "password" name ="body" value="" placeholder="password"><br/>
+        <input id = "new-user-password-confirmation" type = "password" name ="body" value="" placeholder="password confirmation"><br/>
+        <button id="user-button">Make User</button>
+      </div>
+      </br>
+    <!-- LOGIN FORM -->
+      <div class= "login-form" id="login">
+      <h4>Let's start chatting, Log in!</h4>
+        <input id = "user-login" type = "text" name ="body" value="" placeholder="username"><br/>
+        <input id = "user-password" type = "password" name ="body" value="" placeholder="password"><br/>
+        <button id="login-button">Log In</button>
+      </div>
+    <!-- LOGIN GREETING -->
+      <div id= "userDiv">
+      </div>
+    <!-- NEW COMMENT -->
+      <div id="new-comment">
+        <textarea id = "new-post" type="text" name="body" value="" placeholder="post here"></textarea><br/>
+          <!-- Emoji: <textarea id = "new-emoji" name="body"></textarea><br/> -->
+        <button id="submit-button">Submit Comment</button>
+      </div>
+    <!--  LINE INFO DIV -->
+      <div id="line-info">
+      </div>
+    <!-- LINE COMMENTS DIV-->
+      <div id="line">
+      </div>
+    </div>
+  </body>
 </html>
 
 
