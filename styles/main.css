@@ -1,19 +1,19 @@
 div#Tlogo{
   display: inline-block;
-  margin-top: 100px;
+  margin-top: 120px;
   margin-left: 100px;
-
+  margin-bottom: 30px;
 }
 
 h1{
   display: inline-block;
-
 }
 
 div#lines{
   display: block;
   margin-left: 100px;
   margin-right: 50px;
+  margin-bottom: 10px;
   font-size: 11px;
 }
 
@@ -21,10 +21,37 @@ div#line{
   font-size: 15px;
 }
 
-div#aa{
-  margin: 150px;
+div#all-actions{
+  margin-left: 105px;
 }
 
+/*NEW USER FORM*/
+.new-user-form input{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+#user-button{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/*LOGIN FORM*/
+.login-form input{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+#login-button{
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+  background-color: white;
+  border-radius: 5px;
+}
 #new-user {
   display: none;
 }
@@ -33,3 +60,104 @@ div#aa{
   display: none;
 }
 
+/*BUTTONS*/
+[id='1']{
+  background-color: #fa2d27;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='2']{
+  background-color: #fa2d27;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='3']{
+  background-color: #008150;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='4']{
+  background-color: #008150;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='5']{
+  background-color: #2f5da6;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='6']{
+  background-color: #2f5da6;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='7']{
+  background-color: #fd8a03;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='8']{
+  background-color: #fd8a03;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='9']{
+  background-color: #9a9c9d;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}
+[id='10']{
+  background-color: #9a9c9d;
+  color: white;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: inherit;
+  width: 85px;
+  padding-left: 0;
+  padding-right: 0;
+}

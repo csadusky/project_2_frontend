@@ -39,6 +39,7 @@ $(document).ready(function(){
     line_data.forEach(function(line){
       $("#lines").append("<button id='" + line.id + "'>" + line.name + "</button>");
     })
+
   }).fail(function(line_data){
     console.log("failed when going to get line data");
     alert("failed");
@@ -58,8 +59,8 @@ $(document).ready(function(){
       $('#line').append(lineHTML);
 
       line_data.comments.forEach(function(comment){
-        var commentHTML = "<p><h3>" + comment.user.username + "</h3>" + comment.post + " " + comment.time +  "</p>";
-        $('#line').append(commentHTML);
+        var commentHTML = "<div><h3>" + comment.user.username + "</h3><span>" + comment.post + " " + comment.time +  "</span></div>";
+        $('#line').prepend(commentHTML);
       })
     })
     .fail(function(line_data){
@@ -117,6 +118,7 @@ $(document).ready(function(){
     })
     .done(function(response, textStatus){
       $("#new-user").hide();
+      $("#login").show();
       console.log("Your account has been created!");
       //renderNewUser();
     })
