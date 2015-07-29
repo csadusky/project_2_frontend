@@ -1,7 +1,7 @@
 //PATH FOR HEROKU
 var baseURL = function(){
- // return "http://localhost:3000";
- return "https://immense-plateau-4769.herokuapp.com";
+ return "http://localhost:3000";
+ // return "https://immense-plateau-4769.herokuapp.com";
 };
 
 //Function that checks to see if token is present, to show things, hide things
