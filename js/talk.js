@@ -42,6 +42,7 @@ $(document).ready(function(){
 
   }).fail(function(line_data){
     console.log("failed when going to get line data");
+    console.log(baseURL()+"/lines");
     alert("failed");
   });
 
