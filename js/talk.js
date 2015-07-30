@@ -34,7 +34,7 @@ $(document).ready(function(){
   // SHOW LIST OF LINES
   $.ajax({
     type: 'GET',
-    url: baseURL() + "/lines"
+    url: baseURL() + "/lines.json"
   }).done(function(line_data){
     line_data.forEach(function(line){
       $("#lines").append("<button id='" + line.id + "'>" + line.name + "</button>");
