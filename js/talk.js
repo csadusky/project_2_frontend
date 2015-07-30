@@ -89,7 +89,7 @@ $(document).ready(function(){
 
     $.ajax({
       type: 'POST',
-      url: baseURL + "/lines/" + currentLineId + "/comments",
+      url: baseURL() + "/lines/" + currentLineId + "/comments",
       dataType: "json",
       data: commentData,
       headers: { Authorization: 'Token token=' + simpleStorage.get('token') }
